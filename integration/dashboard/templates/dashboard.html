@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentin-AI Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔥 Sentin-AI Fire Verification System</h1>
+            <p class="tagline">Dual-Brain Edge AI Protection</p>
+        </header>
+
+        <!-- System Status -->
+        <div class="card status-card" id="status-card">
+            <h2>System Status</h2>
+            <div class="status-indicator">
+                <div class="status-badge" id="status-badge">NORMAL</div>
+                <div class="uptime">Uptime: <span id="uptime">0s</span></div>
+            </div>
+        </div>
+
+        <!-- Sensor Readings -->
+        <div class="sensor-grid">
+            <div class="card sensor-card">
+                <h3>UV Sensor</h3>
+                <div class="sensor-value" id="uv-value">50</div>
+                <div class="sensor-unit">ADC Units</div>
+                <div class="sensor-status" id="uv-status">●</div>
+            </div>
+
+            <div class="card sensor-card">
+                <h3>VOC Gas</h3>
+                <div class="sensor-value" id="voc-value">120</div>
+                <div class="sensor-unit">ppb</div>
+                <div class="sensor-status" id="voc-status">●</div>
+            </div>
+
+            <div class="card sensor-card">
+                <h3>Temperature</h3>
+                <div class="sensor-value" id="temp-value">22.5</div>
+                <div class="sensor-unit">°C</div>
+                <div class="sensor-status" id="temp-status">●</div>
+            </div>
+
+            <div class="card sensor-card">
+                <h3>Humidity</h3>
+                <div class="sensor-value" id="humidity-value">45</div>
+                <div class="sensor-unit">%</div>
+                <div class="sensor-status" id="humidity-status">●</div>
+            </div>
+        </div>
+
+        <!-- AI Verification -->
+        <div class="card ai-card">
+            <h2>AI Vision Status</h2>
+            <div class="ai-status">
+                <div class="ai-indicator">
+                    <span class="label">Flame Detection:</span>
+                    <span id="flame-status" class="value">Clear</span>
+                </div>
+                <div class="ai-indicator">
+                    <span class="label">Confidence:</span>
+                    <span id="confidence" class="value">0%</span>
+                </div>
+                <div class="ai-indicator">
+                    <span class="label">Inference Time:</span>
+                    <span id="inference-time" class="value">0 ms</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Control Panel -->
+        <div class="card controls-card">
+            <h2>System Controls</h2>
+            <div class="button-group">
+                <button class="btn btn-primary" onclick="testAlarm()">Test Alarm</button>
+                <button class="btn btn-secondary" onclick="calibrateSensors()">Calibrate Sensors</button>
+                <button class="btn btn-secondary" onclick="viewAlerts()">View Alert History</button>
+            </div>
+        </div>
+
+        <!-- Alert Log -->
+        <div class="card alerts-card" id="alerts-section" style="display:none;">
+            <h2>Recent Alerts</h2>
+            <div id="alerts-list">
+                <p class="no-alerts">No alerts recorded</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>Project Ridgewood • Sentin-AI v1.0</p>
+            <p class="mission">Preventing tragedy through edge AI sensor fusion</p>
+        </footer>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
