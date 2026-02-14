@@ -57,6 +57,8 @@ cd lizard-brain
 pio run --target upload
 ```
 
+> **Note**: PlatformIO will automatically download and install all required libraries (ArduinoJson, Wire, Adafruit BME680, etc.) during the first build.
+
 #### 4. Start Cortex AI System
 
 ```bash
